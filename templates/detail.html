@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}{{ book.id }}{% endblock %}
+
+
+{% block content %}
+	
+	<a href="{{ url_for('delete', Book_id=book.id )}}" class="btn btn-danger">delete</a>
+
+	<h1>{{ book.body }}</h1>
+	<p>{{ book.date.strftime('%Y-%m-%d') }}</p>
+
+
+{% endblock %}

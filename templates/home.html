@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+
+
+{% for book in books %}
+
+	<a href="{{ url_for('detail', Book_id=book.id )}}">{{ book.body }}</a>
+	<p>{{ book.date.strftime('%Y-%m-%d') }}</p>
+
+{% endfor %}
+
+
+
+{% endblock %}
